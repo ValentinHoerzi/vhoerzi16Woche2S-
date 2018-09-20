@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="700.0" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.htlgrieskirchen.pos3.hierarchy.origins.fx.Controller">
+   <children>
+      <MenuBar layoutX="5.0" layoutY="2.0" prefHeight="26.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
+               <items>
+                  <MenuItem fx:id="menuItemSave" mnemonicParsing="false" onAction="#handleMenuSave" text="Save" />
+                  <MenuItem fx:id="menuItemSaveAs" mnemonicParsing="false" onAction="#handleMenuSaveAs" text="Save as..." />
+                  <MenuItem fx:id="menuItemOpen" mnemonicParsing="false" onAction="#handleMenuOpen" text="Open" />
+                  <MenuItem fx:id="menuItemExit" mnemonicParsing="false" onAction="#handleMenuExit" text="Close" />
+               </items>
+            </Menu>
+            <Menu fx:id="menuLanguage" mnemonicParsing="false" text="Language">
+               <items>
+                  <MenuItem fx:id="menuItemGerman" mnemonicParsing="false" onAction="#onMenuItemGerman" text="German" />
+                  <MenuItem fx:id="menuItemEnglish" mnemonicParsing="false" onAction="#onMenuItemEnglish" text="English" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <TableView layoutY="26.0" prefHeight="260.0" prefWidth="700.0" AnchorPane.bottomAnchor="114.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tableColmnWirtschaftssektor" minWidth="100.0" prefWidth="175.0" text="Wirtschaftssektor" />
+            <TableColumn fx:id="tableColmnBranche" minWidth="100.0" prefWidth="175.0" text="Branche" />
+            <TableColumn fx:id="tableColmnGruppe" minWidth="100.0" prefWidth="175.0" text="Gruppe" />
+            <TableColumn fx:id="tableColmnSparte" minWidth="100.0" prefWidth="175.0" text="Sparte" />
+        </columns>
+      </TableView>
+      <Label fx:id="labelShowText" layoutX="14.0" layoutY="304.0" prefHeight="25.0" prefWidth="290.0" styleClass="styleLabelText" text="Weiteres Objekt Hinzufügen" AnchorPane.bottomAnchor="74.0" AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <HBox layoutY="331.0" prefHeight="55.0" prefWidth="700.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="175.0" prefWidth="189.0">
+               <children>
+                  <TextField fx:id="textField1" layoutX="18.0" layoutY="14.0" AnchorPane.leftAnchor="18.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="175.0">
+               <children>
+                  <TextField fx:id="textField2" layoutX="11.0" layoutY="14.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="175.0">
+               <children>
+                  <TextField fx:id="textField4" layoutX="12.0" layoutY="14.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="200.0" prefWidth="175.0">
+               <children>
+                  <TextField fx:id="textField4" layoutX="12.0" layoutY="14.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+      <Button fx:id="button" layoutX="375.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="25.0" prefWidth="290.0" text="Add" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="30.0" />
+   </children>
+</AnchorPane>
